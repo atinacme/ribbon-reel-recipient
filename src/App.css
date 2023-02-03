@@ -1,38 +1,245 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: 'Eina01Bold';
+  src: url('./fonts/Eina01Bold/Eina01-Bold.eot');
+  src: url('./fonts/Eina01Bold/Eina01-Bold.eot') format('embedded-opentype'),
+    url('./fonts/Eina01Bold/Eina01-Bold.woff2') format('woff2'),
+    url('./fonts/Eina01Bold/Eina01-Bold.woff') format('woff'),
+    url('./fonts/Eina01Bold/Eina01-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: 'Eina02Semibold';
+  src: url('./fonts/Eina02Semibold/Eina02-SemiBold.eot');
+  src: url('./fonts/Eina02Semibold/Eina02-SemiBold.eot') format('embedded-opentype'),
+    url('./fonts/Eina02Semibold/Eina02-SemiBold.woff2') format('woff2'),
+    url('./fonts/Eina02Semibold/Eina02-SemiBold.woff') format('woff'),
+    url('./fonts/Eina02Semibold/Eina02-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+  font-family: 'Eina01Regular';
+  src: url('./fonts/Eina01Regular/Eina01-Regular.eot');
+  src: url('./fonts/Eina01Regular/Eina01-Regular.eot') format('embedded-opentype'),
+    url('./fonts/Eina01Regular/Eina01-Regular.woff2') format('woff2'),
+    url('./fonts/Eina01Regular/Eina01-Regular.woff') format('woff'),
+    url('./fonts/Eina01Regular/Eina01-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@font-face {
+  font-family: 'Eina01Semibold';
+  src: url('./fonts/Eina01Semibold/Eina01-SemiBold.eot');
+  src: url('./fonts/Eina01Semibold/Eina01-SemiBold.eot') format('embedded-opentype'),
+    url('./fonts/Eina01Semibold/Eina01-SemiBold.woff2') format('woff2'),
+    url('./fonts/Eina01Semibold/Eina01-SemiBold.woff') format('woff'),
+    url('./fonts/Eina01Semibold/Eina01-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Eina02Bold';
+  src: url('./fonts/Eina02Bold/Eina02-Bold.eot');
+  src: url('./fonts/Eina02Bold/Eina02-Bold.eot') format('embedded-opentype'),
+    url('./fonts/Eina02Bold/Eina02-Bold.woff2') format('woff2'),
+    url('./fonts/Eina02Bold/Eina02-Bold.woff') format('woff'),
+    url('./fonts/Eina02Bold/Eina02-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Eina02Regular';
+  src: url('./fonts/Eina02Regular/Eina02-Regular.eot');
+  src: url('./fonts/Eina02Regular/Eina02-Regular.eot') format('embedded-opentype'),
+    url('./fonts/Eina02Regular/Eina02-Regular.woff2') format('woff2'),
+    url('./fonts/Eina02Regular/Eina02-Regular.woff') format('woff'),
+    url('./fonts/Eina02Regular/Eina02-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.e1b {
+  font-family: 'Eina01Bold';
+}
+
+.e2sb {
+  font-family: 'Eina02Semibold';
+}
+
+.e1r {
+  font-family: 'Eina01Regular';
+}
+
+.e1sb {
+  font-family: 'Eina01Semibold';
+}
+
+.e2b {
+  font-family: 'Eina02Bold';
+}
+
+.e2r {
+  font-family: 'Eina02Regular';
+}
+
+.skip-to-content-link {
+  display: none;
+}
+
+body {
+  background: #00187F;
+  color: #fff
+}
+
+.client--side-section--wrapper {
+  max-width: 992px;
+  margin: auto;
+  padding: 35px 25px;
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  position: relative
+}
+
+.button {
+  margin-top: 22px;
+}
+
+.button a {
+  background: #fff;
+  color: #00187f;
   display: flex;
-  flex-direction: column;
+  text-decoration: none;
+
+  font-size: 16px;
+  width: 345px;
+  height: 64px;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  padding: 15px;
+  box-sizing: border-box;
+  max-width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.animation-step1 .title {
+  font-size: 29px;
+
+  margin-top: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.animation-step2 .title {}
+
+.title {
+  font-size: 22px;
+  color: #fff;
+  max-width: 200px;
+  line-height: 1.2;
+}
+
+.animation-step1 .description {
+  font-size: 20px;
+
+  max-width: 340px;
+  line-height: normal;
+  margin-top: 15px;
+}
+
+.animation-step3 .lowertext {
+  font-size: 29px;
+}
+
+.innerstage {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%)
+}
+
+.hide {
+  display: none
+}
+
+a {
+  text-decoration: none;
+  color: #fff
+}
+
+.lowertext,
+.lowertext a {
+  font-size: 16px;
+}
+
+.mt30 {
+  margin-top: 30px
+}
+
+.mt5 {
+  margin-top: 5px;
+}
+
+.ml5 {
+  margin-left: 5px
+}
+
+.mt90 {
+  margin-top: 90px
+}
+
+.txt29 {
+  font-size: 29px
+}
+
+.txt16 {
+  font-size: 16px
+}
+
+.txt20 {
+  font-size: 20px;
+}
+
+.button a.round {
+  border-radius: 90px
+}
+
+.button a.small-btn {
+  width: 77px;
+  height: 41px;
+  line-height: .5em;
+}
+
+.button a.center-btn {
+  display: block;
+  margin: auto
+}
+
+.lnh1 {
+  line-height: 1
+}
+
+.animation-step4 .description {
+  line-height: 1.3;
+  max-width: 300px;
+}
+
+.animation-step7 .innerstage .description {
+  max-width: 290px;
+  line-height: 1.3;
+}
+
+.animation-step8.step .button {
+  position: absolute;
+  top: 70%;
+  transform: translate(-50%, -70%);
+  left: 50%;
 }
