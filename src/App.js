@@ -86,11 +86,13 @@ function App() {
                     <path d="M12.01 3H0V5H12.01V8L16 4L12.01 0V3Z" fill="#00187F" />
                   </svg></a></div>
                   <div className="lowertext mt30 e1sb"><a href="#">What is RibbonReel?</a></div>
+                  <div className='animated-step1_img'></div>
                 </div>
               </>
               :
               <>
                 <div className="animation-step2 step">
+                  <div className='animated-step2_content'>
                   <div className="title e2b">To Sebastian From Alex</div>
                   {!firstSure ?
                     <div className="innerstage">
@@ -136,6 +138,7 @@ function App() {
                     </>
                   }
                 </div>
+                </div>
               </>
             }
           </>
@@ -151,6 +154,10 @@ function App() {
                   <video id="myVideo" width="320" height="240" controls autoPlay muted>
                     <source src={video} type="video/mp4" />
                   </video>
+                </div>
+                <div className='animation-video_block-wrap'>
+                <div className='animation-video_block block1'></div>
+                <div className='animation-video_block block2'></div>
                 </div>
               </div>
             }
