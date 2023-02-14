@@ -154,6 +154,7 @@ function App() {
                   <video id="myVideo" width="320" height="240" controls autoPlay muted>
                     <source src={video} type="video/mp4" />
                   </video>
+                  
                 </div>
                 <div className='animation-video_block-wrap'>
                 <div className='animation-video_block block1'></div>
