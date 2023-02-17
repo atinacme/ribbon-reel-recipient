@@ -1,5 +1,12 @@
 import React, { useState, useEffect } from 'react';
+// import useHistory  from 'react-router-dom';
 import './App.css';
+import bgimg from '../src/assets/GiftWrap.png';
+import downloadimg from '../src/assets/download.svg';
+import recordimg from '../src/assets/record.svg';
+import ribbonheader from '../src/assets/ribbonheader.png';
+import arrowleft from '../src/assets/arrow_left.png';
+import Groupimg from '../src/assets/Group.png';
 
 function App() {
   const [videoMsg, setVideoMsg] = useState(false);
@@ -11,6 +18,14 @@ function App() {
   const [open, setOpen] = useState(false);
   const [videoOpen, setVideoOpen] = useState(false);
   const [video, setVideo] = useState("https://cdn.shopify.com/videos/c/o/v/122db422ff1f4ab0ba1998ce892344fb.mp4");
+
+
+  // function HomeButton() {
+  //   let history = useHistory();
+
+  //   function handleClick() {
+  //     history.push("/home");
+  //   }
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -71,7 +86,7 @@ function App() {
           <>
             {!videoMsg ?
               <>
-                <div className="header--wrap hide">
+                <div className="header--wrap">
                   <a href="#" className="header__heading-link link link--text focus-inset">
                     <svg width="160" height="28" viewBox="0 0 160 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H5.56156C7.03658 0 8.45119 0.585949 9.49418 1.62894C10.5372 2.67194 11.1231 4.08655 11.1231 5.56156H5.56156V16.6847C4.08655 16.6847 2.67194 16.0987 1.62894 15.0557C0.585949 14.0128 0 12.5981 0 11.1231V0ZM5.56156 16.6847C7.03658 16.6847 8.45119 17.2706 9.49418 18.3136C10.5372 19.3566 11.1231 20.7712 11.1231 22.2463V27.8078H5.56156V16.6847ZM16.6847 16.6847C15.2097 16.6847 13.7951 16.0987 12.7521 15.0557C11.7091 14.0128 11.1231 12.5981 11.1231 11.1231V5.56156C12.5981 5.56156 14.0128 6.14751 15.0557 7.19051C16.0987 8.2335 16.6847 9.64811 16.6847 11.1231V16.6847ZM16.6847 16.6847C18.1597 16.6847 19.5743 17.2706 20.6173 18.3136C21.6603 19.3566 22.2463 20.7712 22.2463 22.2463V27.8078H16.6847V16.6847ZM33.9873 22.2463H28.4258V16.6847C28.4258 15.2097 27.8398 13.7951 26.7968 12.7521C25.7538 11.7091 24.3392 11.1231 22.8642 11.1231V0H17.3026V5.56156C17.3026 7.03658 17.8886 8.45119 18.9316 9.49418C19.9746 10.5372 21.3892 11.1231 22.8642 11.1231V16.6847C22.8642 18.1597 23.4502 19.5743 24.4932 20.6173C25.5361 21.6603 26.9508 22.2463 28.4258 22.2463C28.4258 23.7213 29.0117 25.1359 30.0547 26.1789C31.0977 27.2219 32.5123 27.8078 33.9873 27.8078H39.5489V16.6847C39.5489 15.2097 38.9629 13.7951 37.92 12.7521C36.877 11.7091 35.4624 11.1231 33.9873 11.1231V0H28.4258V5.56156C28.4258 7.03658 29.0117 8.45119 30.0547 9.49418C31.0977 10.5372 32.5123 11.1231 33.9873 11.1231V22.2463Z" fill="#FFD682" />
@@ -93,51 +108,51 @@ function App() {
               <>
                 <div className="animation-step2 step">
                   <div className='animated-step2_content'>
-                  <div className="title e2b">To Sebastian From Alex</div>
-                  {!firstSure ?
-                    <div className="innerstage">
-                      {first}
-                      {firstDesc}
-                    </div>
-                    :
-                    <>
-                      {!firstDot ?
-                        <div className="innerstage">
-                          <div className="description e2b txt29">Are you sure?</div>
-                          <div className="lowertext2 e1r txt16 mt5">We don't want to ruin this.</div>
-                          <div className="button_text mt90" onClick={() => setFirstDot(true)}><a href="#" className="e2b txt20">Yes I have it with me <svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12.01 3.5H0V5.5H12.01V8.5L16 4.5L12.01 0.5V3.5Z" fill="white" />
-                          </svg>
-                          </a></div>
-                          <div className="button_text2 mt30 lnh1"><a href="#" className="e2b txt20">Eh, I lied... <svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12.01 3.5H0V5.5H12.01V8.5L16 4.5L12.01 0.5V3.5Z" fill="white" />
-                          </svg>
-                          </a>
+                    <div className="title e2b">To Sebastian From Alex</div>
+                    {!firstSure ?
+                      <div className="innerstage">
+                        {first}
+                        {firstDesc}
+                      </div>
+                      :
+                      <>
+                        {!firstDot ?
+                          <div className="innerstage">
+                            <div className="description e2b txt29">Are you sure?</div>
+                            <div className="lowertext2 e1r txt16 mt5">We don't want to ruin this.</div>
+                            <div className="button_text mt90" onClick={() => setFirstDot(true)}><a href="#" className="e2b txt20">Yes I have it with me <svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M12.01 3.5H0V5.5H12.01V8.5L16 4.5L12.01 0.5V3.5Z" fill="white" />
+                            </svg>
+                            </a></div>
+                            <div className="button_text2 mt30 lnh1"><a href="#" className="e2b txt20">Eh, I lied... <svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M12.01 3.5H0V5.5H12.01V8.5L16 4.5L12.01 0.5V3.5Z" fill="white" />
+                            </svg>
+                            </a>
+                            </div>
                           </div>
-                        </div>
-                        :
-                        <div className="innerstage">
-                          {!firstHmm ?
-                            <div className="lowertext e2b txt29">...</div>
-                            :
-                            <>
-                              <div className="description e2b txt29">Hmm... do you really want to watch it now?</div>
-                              <div className="lowertext2 e1r txt16 ">Or maybe after you open it?</div>
-                              <div className="button_text mt90" onClick={() => setOpen(true)}><a href="#" className="e2b txt20">C'MON! <svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12.01 3.5H0V5.5H12.01V8.5L16 4.5L12.01 0.5V3.5Z" fill="white" />
-                              </svg>
-                              </a></div>
-                              <div className="button_text2  mt30 lnh1"><a href="#" className="e2b txt20">I'll hold off.. <svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12.01 3.5H0V5.5H12.01V8.5L16 4.5L12.01 0.5V3.5Z" fill="white" />
-                              </svg>
-                              </a></div>
-                            </>
-                          }
-                        </div>
-                      }
-                    </>
-                  }
-                </div>
+                          :
+                          <div className="innerstage">
+                            {!firstHmm ?
+                              <div className="lowertext e2b txt29">...</div>
+                              :
+                              <>
+                                <div className="description e2b txt29">Hmm... do you really want to watch it now?</div>
+                                <div className="lowertext2 e1r txt16 ">Or maybe after you open it?</div>
+                                <div className="button_text mt90" onClick={() => setOpen(true)}><a href="#" className="e2b txt20">C'MON! <svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M12.01 3.5H0V5.5H12.01V8.5L16 4.5L12.01 0.5V3.5Z" fill="white" />
+                                </svg>
+                                </a></div>
+                                <div className="button_text2  mt30 lnh1"><a href="#" className="e2b txt20">I'll hold off.. <svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M12.01 3.5H0V5.5H12.01V8.5L16 4.5L12.01 0.5V3.5Z" fill="white" />
+                                </svg>
+                                </a></div>
+                              </>
+                            }
+                          </div>
+                        }
+                      </>
+                    }
+                  </div>
                 </div>
               </>
             }
@@ -149,18 +164,74 @@ function App() {
                 <div className="button"><a href="#" className="round small-btn e1sb center-btn" onClick={() => setVideoOpen(true)}>Open</a></div>
               </div>
               :
-              <div className="animation-step9 step">
-                <div className="video-wrap">
-                  <video id="myVideo" width="320" height="240" controls autoPlay muted>
-                    <source src={video} type="video/mp4" />
-                  </video>
-                  
+              <>
+                <div className="animation-step9 step">
+                  <div className="video-wrap">
+                    <video id="myVideo" width="320" height="240" controls autoPlay muted>
+                      <source src={video} type="video/mp4" />
+                    </video>
+
+                  </div>
+                  <div className='animation-video_block-wrap'>
+                    <div className='animation-video_block block1'></div>
+                    <div className='animation-video_block block2'></div>
+                  </div>
                 </div>
-                <div className='animation-video_block-wrap'>
-                <div className='animation-video_block block1'></div>
-                <div className='animation-video_block block2'></div>
+                <div className='animation-step10 step hide'>
+                  <div className='animated-header'>
+                    <img src={ribbonheader} alt='ribbon' />
+                  </div>
+                  <div className='animation10_wrapper'>
+                    <div className='animation-step10_img'>
+                      <img src={bgimg} alt='bgimg' />
+                    </div>
+                    <div className="video-wrap">
+                      <video id="myVideo" width="320" height="240" controls autoPlay muted>
+                        <source src={video} type="video/mp4" />
+                      </video>
+                    </div>
+                  </div>
+                  <div className='animation-step10_descrbtion'>
+                    <div className="title e2b">To Sebastian From Alex</div>
+                    <ul>
+                      <li><img src={downloadimg} alt="download" />Download</li>
+                      <li><img src={recordimg} alt="record" />Record Your Reaction</li>
+                    </ul>
+                  </div>
                 </div>
-              </div>
+
+                <div className='animation-step11 step hide'>
+                  <div className='animated-header'>
+                    <img src={ribbonheader} alt='ribbon' />
+                  </div>
+                  <div className='describtion mt30'>
+                    <div className='e1b txt48'>Let's Record  your Reaction!</div>
+                    <div className='e1sb txt20 mt30'>With RibbonReactions you can make experience complete for Alex.
+                      Simply record a video unwrapping your gift, totally free!</div>
+                    <button className='e1sb txt14 tipwrap mt90'>Tip</button>
+                    <div className='e1sb txt20 mt20'>Make sure to place the camera in an angle where we can see the gift!</div>
+                    <button className='e1b txt20 begin_cta'>Let's Begin!</button>
+                  </div>
+                </div>
+                <div className='animation-step12_wrapper hide'>
+                <div className='animation-step12 step'>
+                  <div className='animated-header'>
+                    <img src={ribbonheader} alt='ribbon' />
+                  </div>
+                  <div className='animation12_describtion mt30'>
+                    <div className="button_text mb69 mt30" onClick={() => setFirstDot(true)}><a href="#" className="e2b txt20">
+                      <img src={arrowleft} alt="img" />Back </a> </div>
+                    <div className='e2r txt28'><strong>First,</strong> find a good angle for your camera.</div>
+                    <div className="button_text mt90" onClick={() => setFirstDot(true)}><a href="#" className="e2b txt20">Continue to Record
+                      <svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.01 3.5H0V5.5H12.01V8.5L16 4.5L12.01 0.5V3.5Z" fill="white" />
+                      </svg>
+                    </a>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+              </>
             }
           </>
         }
