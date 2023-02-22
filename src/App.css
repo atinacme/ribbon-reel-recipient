@@ -118,6 +118,7 @@ body {
 
 .button {
   margin-top: 22px;
+  cursor: pointer;
 }
 
 .button a {
@@ -182,45 +183,60 @@ a {
 .mt30 {
   margin-top: 30px
 }
+
 .mb65 {
   margin-top: 65px;
 }
+
 .mt5 {
   margin-top: 5px;
 }
+
 .mb69 {
   margin-bottom: 69px;
 }
+
 .ml5 {
   margin-left: 5px
 }
+
 .mt20 {
   margin-top: 20px;
 }
+
 .mt90 {
   margin-top: 90px
 }
+
 .mt65 {
   margin-top: 65px;
 }
+
 .txt29 {
   font-size: 29px
 }
+
 .txt28 {
   font-size: 28px;
 }
+
 .txt16 {
   font-size: 16px
 }
+
 .txt14 {
   font-size: 14px;
 }
+
 .txt20 {
   font-size: 20px;
 }
+
 .txt48 {
-  font-size: 48px;;
+  font-size: 48px;
+  ;
 }
+
 .button a.round {
   border-radius: 90px
 }
@@ -256,40 +272,46 @@ a {
   transform: translate(-50%, -70%);
   left: 50%;
 }
+
 .animation_all_steps {
   position: relative;
   height: 100vh;
   width: 100%;
 }
+
 .animation-step1.step {
   position: absolute;
   height: 100%;
   width: 100%;
   top: 10%;
 }
+
 .animation-step12_wrapper {
   background-color: #4F0ACC;
   height: 100vh;
 }
-.animation-step1.step,
-.animation-step12.step {
-  background-image: url(assets/animated-img.png);
-  background-repeat: no-repeat;
-  width: calc(100% - 24px);
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  bottom: 0;
-  background-position: bottom center;
-  background-size: contain;
-}
-@media (min-width: 769px)  {
+
+/* @media (min-width: 769px)  {
   .animation-step1.step,
   .animation-step12.step {
     background-image: url(assets/recepientbg.svg);
   }
-}
+} */
+@media (max-width: 768px) {
 
+  .animation-step1.step,
+  .animation-step12.step {
+    background-image: url(assets/animated-img.png);
+    background-repeat: no-repeat;
+    width: calc(100% - 24px);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 0;
+    background-position: bottom center;
+    background-size: contain;
+  }
+}
 
 .animation-step8.step,
 .animation-step2.step {
@@ -300,15 +322,8 @@ a {
   background-position: right;
 }
 
-.animation-step2.step {
-  background-image: url(assets/img2.svg);
 
-}
 
-.animation-step8.step {
-  background-image: url(assets/img3.svg);
-  background-position: center;
-}
 
 
 .video-wrap video {
@@ -390,9 +405,11 @@ a {
 .video-wrap {
   height: 80vh;
 }
+
 .header--wrap {
   padding: 34px 15px;
 }
+
 @media (min-width: 769px) {
   .animation-step2.step {
     background-position: unset;
@@ -403,9 +420,11 @@ a {
   .animation-step1 .title {
     margin-top: 5px;
   }
+
   .client--side-section--wrapper {
     max-width: 100%;
   }
+
   .description {
     width: 248px;
   }
@@ -441,6 +460,7 @@ a {
   position: relative;
   height: 100vh;
 }
+
 .animation-step9 .video-wrap:before {
   content: "";
   background: url(assets/thread_up.png) top no-repeat;
@@ -455,6 +475,7 @@ a {
   animation: thradup 5s;
   animation-fill-mode: forwards;
 }
+
 .animation-step9 .video-wrap:after {
   content: "";
   background: url(assets/thread_down.png) top no-repeat;
@@ -469,7 +490,8 @@ a {
   animation: threaddown 5s;
   animation-fill-mode: forwards;
 }
-@keyframes thradup  {
+
+@keyframes thradup {
   from {
     top: 0px;
   }
@@ -478,9 +500,10 @@ a {
     top: -900px;
     display: none;
     height: 0vh;
- 
+
   }
 }
+
 @keyframes threaddown {
   from {
     left: 0px;
@@ -493,12 +516,13 @@ a {
     width: 0;
   }
 }
+
 @keyframes hidetwo {
- to {
+  to {
     visibility: hidden;
     right: 0;
     top: 0;
-   
+
   }
 }
 
@@ -515,7 +539,7 @@ a {
   left: 0;
   bottom: 0;
   z-index: 9;
-  animation: hidefirst  5s;
+  animation: hidefirst 5s;
   animation-fill-mode: forwards;
   margin: 0 auto;
 }
@@ -610,6 +634,7 @@ button.tipwrap {
   background-color: #E8FFFF;
   border: none;
 }
+
 button.begin_cta {
   width: 90%;
   text-align: center;
@@ -624,47 +649,172 @@ button.begin_cta {
   margin: 35px auto;
 }
 
-.animation12_describtion{
+.animation12_describtion {
   width: 322px;
 }
+
 .animation12_describtion img {
   padding-right: 8px;
 }
-.animation-step12  .button_text svg {
+
+.animation-step12 .button_text svg {
   padding-left: 10px;
 }
+
 .animation-step12 .button_text a {
   display: flex;
   align-items: center;
 }
 
 .animation-step11.step,
-.animation-step10  {
+.animation-step10 {
   padding: 35px 24px;
   background: #4F0ACC;
   height: 100vh;
 }
+
 .animation-step12.step {
   padding-top: 35px;
   padding-bottom: 35px;
   height: 100%;
   position: absolute;
 }
+
 @media (min-width: 769px) {
   .animation-step10 {
     height: 130vh;
   }
-  .animation-step10_descrbtion {
-    padding-top: 183px;
+
+  .animation10-desktop_wrapper .animation-step10_img {
+    width: calc(60% - 50px);
+    position: relative;
+  }
+
+  .animation10-desktop_wrapper .animation-step10_descrbtion {
+    width: 40%;
+    padding-top: 0;
+  }
+
+  .animation10-desktop_wrapper .animation-step10_descrbtion {
+    width: 30%;
   }
 }
+
 .animation12_img {
   text-align: center;
 }
+
+.animation-step1_img {
+  display: none;
+}
+
+.animation10-phone {
+  display: none;
+}
+
+a {
+  cursor: pointer;
+}
+
+@media (min-width: 769px) {
+  .watch_cta button {
+    padding: 6px 10px;
+    border-radius: 47px;
+    border: none;
+    cursor: pointer;
+    margin: 10px 0;
+  }
+
+  .animation10-desktop_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .animation10-desktop_wrapper .animation-step10_descrbtion {
+    position: absolute;
+    right: 0;
+    top: 140px;
+  }
+
+  .animation10-desktop_wrapper .animation-step10.step .video-wrap {
+    background-image: url(assets/giftwrapdesk.png);
+  }
+
+  .animation-step8.step {
+    background-image: url(assets/img3desk.svg);
+    background-position: center;
+  }
+
+  .animation-step1_img {
+    float: right;
+    position: absolute;
+    right: 0;
+    top: -10%;
+    display: block;
+  }
+
+  .animation-step1_img img {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .animation-step1-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .client--side-section--wrapper {
+    max-width: 1300px;
+  }
+
+  .animation-step2.step {
+    background-image: url(assets/img2desk.svg);
+  }
+
+  .innerstage {
+    top: 70%;
+    transform: translateY(-70%);
+  }
+
+  .animation10-desktop .animation-step10_img img {
+    position: absolute;
+    right: -80px;
+  }
+
+  .animation10-desktop .animation-step10_descrbtion .title {
+    padding: 30px 0;
+  }
+}
+
 @media (max-width: 768px) {
+  .animation10-phone .animated-header {
+    padding-bottom: 40px;
+  }
+
+  .animation10-desktop {
+    display: none;
+  }
+
+  .animation10-phone {
+    display: block;
+  }
+
+  .animation-step8.step {
+    background-image: url(assets/img3.svg);
+    background-position: center;
+  }
+
+  .animation-step2.step {
+    background-image: url(assets/img2.svg);
+
+  }
+
   button.begin_cta {
     position: fixed;
   }
+
   .animation-step10.step .video-wrap {
     position: absolute;
     top: 10%;
@@ -672,9 +822,11 @@ button.begin_cta {
     height: 100%;
     right: 8%;
   }
+
   .animation-step12.step {
     height: 100vh;
   }
+
   .animation12_img.mt65 {
     position: fixed;
     bottom: 0;

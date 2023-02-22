@@ -7,6 +7,9 @@ import recordimg from '../src/assets/record.svg';
 import ribbonheader from '../src/assets/ribbonheader.png';
 import arrowleft from '../src/assets/arrow_left.png';
 import Groupimg from '../src/assets/Group.png';
+import alexdesk from "../src/assets/alexdesktop.png";
+import giftwrapdesk from "../src/assets/giftwrapdesk.png";
+import GiftWrap from "../src/assets/Gift_Wrap.svg";
 
 function App() {
   const [videoMsg, setVideoMsg] = useState(false);
@@ -84,13 +87,20 @@ function App() {
                   </a>
                 </div>
                 <div className="animation-step1 step ">
-                  <div className="title e2b">To Sebastian From Alex</div>
-                  <div className="description e1sb">You've received a gift from Alex, and he made it extra special with video message.</div>
-                  <div className="button" onClick={() => setVideoMsg(true)}><a className="e1b">Continue to the video message <svg width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12.01 3H0V5H12.01V8L16 4L12.01 0V3Z" fill="#00187F" />
-                  </svg></a></div>
-                  <div className="lowertext mt30 e1sb"><a>What is RibbonReel?</a></div>
-                  <div className='animated-step1_img'></div>
+                  <div className='animation-step1-wrapper'>
+                    <div className='animation-step1_content'>
+                      <div className="title e2b">To Sebastian From Alex</div>
+                      <div className="description e1sb">You've received a gift from Alex, and he made it extra special with video message.</div>
+                      <div className="button" onClick={() => setVideoMsg(true)}><a className="e1b">Continue to the video message <svg width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.01 3H0V5H12.01V8L16 4L12.01 0V3Z" fill="#00187F" />
+                      </svg></a></div>
+                      <div className="lowertext mt30 e1sb"><a>What is RibbonReel?</a></div>
+                      <div className='animated-step1_img'></div>
+                    </div>
+                    <div className='animation-step1_img'>
+                      <img src={alexdesk} alt="" />
+                    </div>
+                  </div>
                 </div>
               </>
               :
@@ -168,25 +178,52 @@ function App() {
                   </div>
                   :
                   <div className='animation-step10 step'>
+                   
+                    <div className='animation10-phone'>
                     <div className='animated-header'>
                       <img src={ribbonheader} alt='ribbon' />
                     </div>
-                    <div className='animation10_wrapper'>
-                      <div className='animation-step10_img'>
-                        <img src={bgimg} alt='bgimg' />
+                      <div className='animation10_wrapper'>
+                        <div className='animation-step10_img'>
+                          <img src={bgimg} alt='bgimg' />
+                        </div>
+                        <div className="video-wrap">
+                          <video width="320" height="240" controls muted>
+                            <source src={video} type="video/mp4" />
+                          </video>
+                        </div>
                       </div>
-                      <div className="video-wrap">
-                        <video width="320" height="240" controls muted>
-                          <source src={video} type="video/mp4" />
-                        </video>
+                      <div className='animation-step10_descrbtion'>
+                        <div className="title e2b">To Sebastian From Alex</div>
+                        <ul>
+                          <li><img src={downloadimg} alt="download" />Download</li>
+                          {/* <li><img src={recordimg} alt="record" />Record Your Reaction</li> */}
+                        </ul>
                       </div>
                     </div>
-                    <div className='animation-step10_descrbtion'>
-                      <div className="title e2b">To Sebastian From Alex</div>
-                      <ul>
-                        <li><img src={downloadimg} alt="download" />Download</li>
-                        {/* <li><img src={recordimg} alt="record" />Record Your Reaction</li> */}
-                      </ul>
+
+                    <div className='animation10-desktop'>
+                      <div className='animation10-desktop_wrapper'>
+                        <div className='animation-step10_img'>
+                          <img src={GiftWrap} alt='bgimg' />
+                          <div className="video-wrap">
+                            <video width="320" height="240" controls muted>
+                              <source src={video} type="video/mp4" />
+                            </video>
+                          </div>
+                        </div>
+                        <div className='animation-step10_descrbtion'>
+                        <div className='animated-header'>
+                      <img src={ribbonheader} alt='ribbon' />
+                    </div>
+                          <div className="title e2b">To Sebastian From Alex</div>
+                          <div className='watch_cta'><button className='e1sb txt14'>3 days left to watch</button></div>
+                          <ul>
+                            <li><img src={downloadimg} alt="download" />Download</li>
+                            {/* <li><img src={recordimg} alt="record" />Record Your Reaction</li> */}
+                          </ul>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 }
