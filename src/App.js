@@ -12,6 +12,7 @@ import giftwrapdesk from "../src/assets/giftwrapdesk.png";
 import GiftWrap from "../src/assets/Gift_Wrap.svg";
 
 function App() {
+  const [orderId, setOrderId] = useState()
   const [videoMsg, setVideoMsg] = useState(false);
   const [first, setFirst] = useState();
   const [firstDesc, setFirstDesc] = useState();
@@ -22,6 +23,31 @@ function App() {
   const [videoOpen, setVideoOpen] = useState(false);
   const [video, setVideo] = useState("https://cdn.shopify.com/videos/c/o/v/122db422ff1f4ab0ba1998ce892344fb.mp4");
   const [videoEnded, setVideoEnded] = useState(false);
+
+  // useEffect(() => {
+  //   let paramStringGifterName = window.location.href.split('?')[1];
+  //   let queryStringGifterName = new URLSearchParams(paramStringGifterName);
+  //   for (let pair of queryStringGifterName.entries()) {
+  //     console.log("pair---->", pair)
+  //     setOrderId(pair[1])
+  //     const data = { order_id: pair[1] }
+  //     console.log("edj--->", orderId, data)
+  //     const url = process.env.NODE_ENV === 'production' ? 'https://ribbon-reel-receipient.herokuapp.com/api/file/upload' :
+  //       'http://localhost:8080/api/file/findFile';
+  //     fetch(url, {
+  //       method: 'POST',
+  //       body: JSON.stringify(data)
+  //     }).then(res => res.json())
+  //       .then(data => {
+  //         console.log(data)
+  //         if(data.length > 0){
+  //           setVideo(URL.createObjectURL(data[0].filepath))
+  //         }
+  //       })
+  //   }
+  // }, [])
+
+  console.log("video---->", video)
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -178,11 +204,10 @@ function App() {
                   </div>
                   :
                   <div className='animation-step10 step'>
-                   
                     <div className='animation10-phone'>
-                    <div className='animated-header'>
-                      <img src={ribbonheader} alt='ribbon' />
-                    </div>
+                      <div className='animated-header'>
+                        <img src={ribbonheader} alt='ribbon' />
+                      </div>
                       <div className='animation10_wrapper'>
                         <div className='animation-step10_img'>
                           <img src={bgimg} alt='bgimg' />
@@ -213,9 +238,9 @@ function App() {
                           </div>
                         </div>
                         <div className='animation-step10_descrbtion'>
-                        <div className='animated-header'>
-                      <img src={ribbonheader} alt='ribbon' />
-                    </div>
+                          <div className='animated-header'>
+                            <img src={ribbonheader} alt='ribbon' />
+                          </div>
                           <div className="title e2b">To Sebastian From Alex</div>
                           <div className='watch_cta'><button className='e1sb txt14'>3 days left to watch</button></div>
                           <ul>
