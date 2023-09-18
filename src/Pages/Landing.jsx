@@ -22,12 +22,14 @@ function Landing() {
     const [open, setOpen] = useState(false);
     const [videoOpen, setVideoOpen] = useState(false);
     const [video, setVideo] = useState();
+    const [senderType, setSenderType] = useState()
     const [videoEnded, setVideoEnded] = useState(false);
     
     useEffect(() => {
         let paramStringOrder = window.location.href.split('/')[3];
         let paramStringOrderId = paramStringOrder.split('?')[1];
         let paramStringSendBy = window.location.href.split('/')[4];
+        setSenderType(paramStringSendBy)
         const url = paramStringSendBy === 'gifter' ? 
             `${process.env.REACT_APP_BASE_URL}/file/findFileGifter/${paramStringOrderId}` :
                 `${process.env.REACT_APP_BASE_URL}/file/findFileReceipient/${paramStringOrderId}`
@@ -116,7 +118,7 @@ function Landing() {
                                                 </div>
                                             } */}
                                             <div className="description e1sb">You've received a gift from {state.landingPage.gifter_name}, and he made it extra special with video message.</div>
-                                            <div className="button" onClick={() => setVideoMsg(true)}><a className="e1b">Continue to the video message <svg width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <div className="button" onClick={() => {senderType === 'gifter'? setVideoMsg(true): setOpen(true)}}><a className="e1b">Continue to the video message <svg width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M12.01 3H0V5H12.01V8L16 4L12.01 0V3Z" fill="#00187F" />
                                             </svg></a></div>
                                             <div className="lowertext mt30 e1sb"><a>What is RibbonReel?</a></div>
